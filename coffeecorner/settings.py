@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-abeuk*1-@km#)^fvz671c62$p#c93s27fswqkk5*&44np#@s+&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-chatladanin-bkkcoffeeco-247o92cl364.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-chatladanin-bkkcoffeeco-247o92cl364.ws.codeinstitute-ide.net','.herokuapp.com']
 
 
 # Application definition
