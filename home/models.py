@@ -37,3 +37,12 @@ class Review(models.Model):
     rating = models.IntegerField()
     body = models.TextField()
     image = models.ImageField(blank=True)
+
+
+    # Add a Meta class to define order of reviews
+    class Meta:
+        ordering = ["created_on"]
+
+# Display class object as a string to improve readable for admin
+    def __str__(self):
+        return f"Review: {self.body} | by {self.author}"
