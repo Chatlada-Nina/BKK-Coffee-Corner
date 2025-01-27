@@ -9,9 +9,11 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
     cafename = models.CharField(max_length=100, unique=True)
     cafeinfo = models.TextField()
+    excerpt = models.TextField(blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="cafe_posts")
     address = models.TextField()
-    phone = models.IntegerField()
+    phone = models.TextField()
     opentime = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
+
 
