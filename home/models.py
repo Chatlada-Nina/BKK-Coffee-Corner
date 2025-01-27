@@ -10,6 +10,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 # Create Post Cafes model
 class Post(models.Model):
     cafename = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, unique=True, null=True)
     cafeinfo = models.TextField()
     excerpt = models.TextField(blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="cafe_posts")
