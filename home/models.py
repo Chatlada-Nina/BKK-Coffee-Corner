@@ -14,6 +14,13 @@ class Post(models.Model):
     address = models.TextField()
     phone = models.TextField()
     opentime = models.TextField()
+    created_on = models.DateField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
+# Add a Meta class to define order of contents
+    class Meta:
+        ordering = ["-created_on"]
 
+# Display class object as a string to improve readable for admin
+    def __str__(self):
+        return f"{self.cafename} | written by {self.author}"
