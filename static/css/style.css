@@ -21,7 +21,7 @@ body {
 /* Navigation bar */
 
 .logo {
-    width: 200px;
+    max-width: 200px;
 }
 
 .navbar {
@@ -59,10 +59,11 @@ body {
 /* Block Content */
 .main-text {
     font-family: var(--primary-font);
-    font-weight: 500;
+    font-weight: 700;
 }
 .sub-text {
     font-family: var(--secondary-font);
+    font-size: 1.2rem;
 }
 .main-text, .sub-text {
     color: var(--text-color);
@@ -75,7 +76,6 @@ body {
     text-decoration: underline;
     color: var(--text-hover-color);
 }
-
 .page-link {
     border: 1px solid var(--button-bg-color);
     background-color: var(--button-bg-color);
@@ -88,6 +88,8 @@ body {
     background-color: var(--button-hover-color);
     color: var(--button-text-color);
 }
+
+
 
 /* Footer */
 
