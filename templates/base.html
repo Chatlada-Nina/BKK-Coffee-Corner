@@ -43,8 +43,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'homepage' %}"><img src="logo.svg" alt="bkk-coffee-corner-logo" width="50"
-                    height="20"></a>
+            <a class="navbar-brand" href="{% url 'homepage' %}"><img class="logo" src="{% static 'images/logo.png' %}" alt="bkk-coffee-corner-logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
@@ -91,7 +90,7 @@
             <div class="row justify-content-center mb-0">
                 <!-- About us info -->
                 <div class="col-12 col-md-5 col-xl-4 mt-4 text-center">
-                    <img src="logo.svg" alt="bkk-coffee-corner-logo" width="50" height="20">
+                    <img class="logo" src="{% static 'images/logo.png' %}" alt="bkk-coffee-corner-logo">
                     <p class="mt-4">We're the go-to community page for coffee lovers and café explorers in Bangkok.
                         Joinus on a caffeinated adventure—discover hidden gems, share your finds, and stay updated with
                         the latest coffee trends. BKK Coffee Corner is more than a page—it's a community for those who

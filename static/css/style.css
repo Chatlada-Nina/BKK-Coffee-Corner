@@ -19,6 +19,11 @@ body {
 }
 
 /* Navigation bar */
+
+.logo {
+    width: 200px;
+}
+
 .navbar {
     background-color: var(--nav-color);
     color: var(--text-color);
