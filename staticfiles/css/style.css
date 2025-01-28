@@ -1,0 +1,69 @@
+/* CSS varieables */
+:root {
+    --primary-font: 'League Spartan', serif;
+    --secondary-font: 'Lora', sans-serif;
+    --nav-color: #daccba;
+    --background-color: #fff;
+    --text-color: #3b2621;
+    --text-hover-color: #5a4540;
+    --button-bg-color: #7a003c;
+    --button-text-color: #fff;
+    --button-hover-color: #ae6087;
+}
+
+/* Global styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    font-family: var(--primary-font);
+
+}
+
+.nav-item {
+    padding: 0 10px 0 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--text-hover-color);
+    text-decoration: underline;
+}
+
+.navbar-toggler-icon {
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.search-icon:hover {
+    color: var(--text-hover-color);
+}
+
+
+/* Footer */
+
+#footer {
+    background-color: var(--nav-color);
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.social-links a:hover {
+    color: var(--text-hover-color);
+}
