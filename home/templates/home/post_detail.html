@@ -10,17 +10,16 @@
             <img src="{% static 'images/cafe1.jpg' %}" class="scale" alt="placeholder">
         </div>
         <div class="col-md-6">
-            <h1 class="post-cafename">{{ post.cafename }}</h1>
-            <p class="post-excerpt">{{ post.excerpt }}</p>
+            <h1 class="post-cafename main-text">{{ post.cafename }}</h1>
+            <p class="post-excerpt sub-text">{{ post.excerpt }}</p>
             <!-- <p class="post-excerpt">{{ review.rating }} | {{ review.count }} </p>-->
             <!-- The post cafe info goes here -->
-            <!-- Use the | safe filter inside the template tags -->
-            <p class="post-info">{{ post.cafeinfo | safe }}</p>
+            <p class="post-info sub-text">{{ post.cafeinfo | safe }}</p>
         </div>
         <div class="col-md-6">
-            <p class="post-address"><strong>Address: </strong><br>{{ post.address }}</p>
-            <p class="post-phone"><strong>Phone: </strong><br>{{ post.phone }}</p>
-            <p class="post-opentime"><strong>Opening hours: </strong><br>{{ post.opentime }}</p>
+            <p class="post-address sub-text"><strong>Address: </strong><br>{{ post.address }}</p>
+            <p class="post-phone sub-text"><strong>Phone: </strong><br>{{ post.phone }}</p>
+            <p class="post-opentime sub-text"><strong>Opening hours: </strong><br>{{ post.opentime }}</p>
         </div>
     </div>
 </div>
