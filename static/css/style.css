@@ -76,6 +76,12 @@ body {
     text-decoration: underline;
     color: var(--text-hover-color);
 }
+
+.post-info {
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+}
+
 .page-link {
     border: 1px solid var(--button-bg-color);
     background-color: var(--button-bg-color);
