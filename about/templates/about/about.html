@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container mt-2">
+    <div class="row justify-content-center g-4">
+        <div class="col-12 col-md-6">
+            <img src="{% static 'images/about-img.png' %}" width="75%" alt="about us" class="col-12 col-md-6">
+        </div>
+        <div class="col-12 col-md-6">
+            <h2>{{ about.title }}</h2>
+            {{ about.content | safe }}
+        </div>
+        
+        <div class="row">
+            <div class="col text-right">
+                <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

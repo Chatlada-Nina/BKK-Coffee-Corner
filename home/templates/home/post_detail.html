@@ -37,7 +37,7 @@
             <h1 class="post-cafename main-text">{{ post.cafename }}</h1>
             <p class="post-excerpt sub-text">{{ post.excerpt }}</p>
             <!-- <p class="post-excerpt">{{ review.rating }} | {{ review.count }} </p>-->
-            <!-- The post cafe info goes here -->
+            <!-- Use safe filter to tell Django that this content is safe to be interpreted as HTML -->
             <p class="post-info">{{ post.cafeinfo | safe }}</p>
         </div>
         <div class="col-12 col-md-6">
