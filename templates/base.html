@@ -4,6 +4,12 @@
 
 {% url 'about' as about_url %}
 
+{% url 'account_login' as login_url %}
+
+{% url 'account_signup' as signup_url %}
+
+{% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
@@ -62,9 +68,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-circle-user"></i> Log in</a>
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}"><i class="fa-solid fa-circle-user"></i> Logout</a>
                     </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}" title="Login"><i class="fa-solid fa-circle-user"></i></a>
+                    </li>
+                    {% endif %}
 
                 </ul>
                 <form class="d-flex" role="search">
