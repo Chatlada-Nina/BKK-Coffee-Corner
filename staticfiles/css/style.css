@@ -1,7 +1,7 @@
 /* CSS varieables */
 :root {
-    --primary-font: 'League Spartan', serif;
-    --secondary-font: 'Lora', sans-serif;
+    --primary-font: 'Lora', sans-serif;
+    --secondary-font: 'League Spartan', serif;
     --nav-color: #daccba;
     --background-color: #fff;
     --text-color: #3b2621;
@@ -19,6 +19,11 @@ body {
 }
 
 /* Navigation bar */
+
+.logo {
+    max-width: 200px;
+}
+
 .navbar {
     background-color: var(--nav-color);
     color: var(--text-color);
@@ -50,6 +55,40 @@ body {
 .search-icon:hover {
     color: var(--text-hover-color);
 }
+
+/* Block Content */
+.main-text {
+    font-family: var(--primary-font);
+    font-weight: 700;
+}
+.sub-text {
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+}
+.main-text, .sub-text {
+    color: var(--text-color);
+}
+
+.post-link{
+    text-decoration: none;
+}
+.post-link:hover {
+    text-decoration: underline;
+    color: var(--text-hover-color);
+}
+.page-link {
+    border: 1px solid var(--button-bg-color);
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.page-link:hover {
+    border: 1px solid var(--button-hover-color);
+    background-color: var(--button-hover-color);
+    color: var(--button-text-color);
+}
+
 
 
 /* Footer */
