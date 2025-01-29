@@ -89,6 +89,11 @@ body {
     color: var(--button-text-color);
 }
 
+.edit-btn {
+    text-decoration: underline;
+    font-style: italic;
+}
+
 
 /* Footer */
 
