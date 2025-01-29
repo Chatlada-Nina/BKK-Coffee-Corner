@@ -26,8 +26,14 @@ def post_detail(request, slug):
 
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
+    reviews = post.reviews.all().order_by("-created_on")
+    review_count = post.reviews.count()
 
     return render(request,
         "home/post_detail.html",
-        {"post": post},
+        {
+            "post": post,
+            "reviews": reviews,
+            "review_count": review_count,
+        },
     )

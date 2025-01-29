@@ -46,6 +46,46 @@
             <p class="post-opentime sub-text"><strong>Opening hours: </strong><br>{{ post.opentime }}</p>
         </div>
     </div>
-</div> <hr>
+<hr>
+
+ <!-- Displaying count of comments -->
+ <div class="row">
+  <div class="col-12">
+    <strong class="text-secondary">
+      <i class="fa-solid fa-mug-hot"></i> {{ review_count }}
+    </strong>
+  </div>
+  <div class="col-12">
+    <hr>
+  </div>
+</div>
+
+<!-- Displaying reviews -->
+<div class="row">
+  <div class="col-md-8 card mb-4  mt-3 ">
+    <h3>Reviews:</h3>
+    <div class="card-body">
+      <!-- We want a for loop inside the empty control tags
+        to iterate through each comment in comments -->
+      {% for review in reviews %}
+      <div class="p-2 reviews
+        {% if review.author == user %}
+        faded{% endif %}">
+        <p class="font-weight-bold">
+          {{ review.author }}
+          <span class="font-weight-normal">
+            {{ review.created_on }}
+          </span> wrote:
+        </p>
+        <div id="review{{ review.id }}">
+          {{ review.body | linebreaks }}
+        </div>
+      </div>
+      <!-- Our for loop ends here -->
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
 
 {% endblock %}
