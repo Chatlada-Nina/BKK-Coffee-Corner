@@ -65,7 +65,9 @@
           <div class="fst-italic" id="comment{{ comment.id }}">
             {{ comment.body | linebreaks }}
           </div> <hr>
-          
+          {% if user.is_authenticated and comment.author == user %}
+          <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+          {% endif %}
         </div>
         <!-- Our for loop ends here -->
         {% endfor %}
@@ -95,3 +97,8 @@
 </div>
 
 {% endblock content %}
+
+<!-- Add script from comments.js -->
+{% block extra %}
+<script src="{% static 'js/comments.js' %}"></script>
+{% endblock %}
