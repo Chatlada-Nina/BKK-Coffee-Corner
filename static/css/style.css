@@ -69,10 +69,13 @@ body {
     color: var(--text-color);
 }
 
-.post-link{
+.forum-link {
+    color: var(--text-color);
+}
+.post-link, .forum-link{
     text-decoration: none;
 }
-.post-link:hover {
+.post-link:hover, .forum-link:hover {
     text-decoration: underline;
     color: var(--text-hover-color);
 }
@@ -82,14 +85,14 @@ body {
     color: var(--text-color);
 }
 
-.page-link {
+.page-link, .submit-btn {
     border: 1px solid var(--button-bg-color);
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     border-radius: 20px;
     padding: 10px 20px;
 }
-.page-link:hover {
+.page-link:hover, submit-btn:hover {
     border: 1px solid var(--button-hover-color);
     background-color: var(--button-hover-color);
     color: var(--button-text-color);

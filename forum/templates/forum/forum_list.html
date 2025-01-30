@@ -1,27 +1,25 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %} 
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forum</title>
-  </head>
+{% load static %} 
 
-  <body>
-    <div>
-      <h1>Forum list</h1>
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row">
+    <h2 class="main-text my-4 text-center">Forum <span class="fw-light text-decoration-underline">let's talk!</span></h2>
+    <div class="banner text-center mb-4">
+      <img src="{% static 'images/banner.jpg' %}" alt="banner" width="90%">
+  </div>
+
       {% for forum in object_list %}
-    <div>
-      <a href="{% url 'forum_detail' forum.slug %}" class="forum-link">
-      <h2>{{forum.title}}</h2>
-      <p>by: {{forum.author}}</p>
-      <p>{{forum.created_on}}</p></a>
+      <div class="row justify-content-start">
+        <a href="{% url 'forum_detail' forum.slug %}" class="forum-link">
+        <h4 class="main-text">{{forum.title}} ... <i class="fa-regular fa-comments fs-5"></i></h4>
+        <p>by: {{forum.author}} | {{forum.created_on}} </p></a><hr>
       {% endfor %}
-    </div>
-    </div>
-  </body>
-</html>
+      </div>
+  </div>
+</div>
+
 
 {% endblock %}
