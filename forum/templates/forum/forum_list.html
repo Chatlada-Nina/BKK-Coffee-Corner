@@ -10,12 +10,17 @@
   </head>
 
   <body>
-    <h1>Forum list</h1>
-    {% for forum in object_list %}
-    <h2>{{forum.title}}</h2>
-    <p>by: {{forum.author}}</p>
-    <p>{{forum.created_on}}</p>
-    {% endfor %}
+    <div>
+      <h1>Forum list</h1>
+      {% for forum in object_list %}
+    <div>
+      <a href="{% url 'forum_detail' forum.slug %}" class="forum-link">
+      <h2>{{forum.title}}</h2>
+      <p>by: {{forum.author}}</p>
+      <p>{{forum.created_on}}</p></a>
+      {% endfor %}
+    </div>
+    </div>
   </body>
 </html>
 

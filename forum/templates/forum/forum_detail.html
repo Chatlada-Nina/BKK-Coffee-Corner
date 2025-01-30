@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+{% load static %}
+
+<div class="container">
+    <div class="row g-0">
+        <div class="col-md-6">
+            <!-- Forum title goes in these h1 tags -->
+            <h1 class="forum-title">{{ forum.title }}</h1>
+            <!-- Forum author goes before the | the forum's created date goes after -->
+            <p class="forum-subtitle">{{ forum.author }} | {{ forum.created_on }}</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left  top">
+            <div class="card-body">
+                <!-- The forum content goes inside the card-text. -->
+                <!-- Use the | safe filter inside the template tags -->
+                <p class="card-text">
+                    {{ forum.content | safe }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -76,6 +76,12 @@ body {
     text-decoration: underline;
     color: var(--text-hover-color);
 }
+
+.post-info {
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+}
+
 .page-link {
     border: 1px solid var(--button-bg-color);
     background-color: var(--button-bg-color);
@@ -89,6 +95,10 @@ body {
     color: var(--button-text-color);
 }
 
+.edit-btn {
+    text-decoration: underline;
+    font-style: italic;
+}
 
 
 /* Footer */
