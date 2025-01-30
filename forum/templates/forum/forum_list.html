@@ -1,3 +1,5 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,8 +13,10 @@
     <h1>Forum list</h1>
     {% for forum in object_list %}
     <h2>{{forum.title}}</h2>
-    <p>written by: {{forum.author}}</p>
+    <p>by: {{forum.author}}</p>
     <p>{{forum.created_on}}</p>
     {% endfor %}
   </body>
 </html>
+
+{% endblock %}
