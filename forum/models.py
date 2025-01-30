@@ -16,3 +16,20 @@ class Forum(models.Model):
 # Display class object as a string to improve readable for admin
     def __str__(self):
         return f"{self.title} | written by {self.author}"
+    
+
+# Create Comment model
+class Comment(models.Model):
+    forum = models.ForeignKey(Forum, on_delete=models.CASCADE, related_name="comments")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
+    created_on = models.DateField(auto_now_add=True)
+    body = models.TextField()
+
+
+    # Add a Meta class to define order of reviews
+    class Meta:
+        ordering = ["created_on"]
+
+# Display class object as a string to improve readable for admin
+    def __str__(self):
+        return f"Comment: {self.body} | by {self.author}"
