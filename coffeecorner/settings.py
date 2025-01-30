@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'home',
     'about',
+    'forum',
 ]
 # Add constants for Django could handle multiple sites from one database, redirection URLs to redirect us to home page after logged in and logged out.
 SITE_ID = 1
