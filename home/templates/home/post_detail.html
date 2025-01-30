@@ -68,18 +68,18 @@
     <h3 class="main-text">Reviews:</h3>
     <div class="card-body sub-text">
       <!-- We want a for loop inside the empty control tags
-        to iterate through each comment in comments -->
+        to iterate through each review in reviews -->
       {% for review in reviews %}
       <div class="p-2 reviews
         {% if review.author == user %}
         faded{% endif %}">
-        <p class="font-weight-bold">
+        <p class="fw-bold">
           {{ review.author }}
-          <span class="font-weight-normal">
+          <span class="fw-light">
             {{ review.created_on }}
           </span> wrote:
         </p>
-        <div id="review{{ review.id }}">
+        <div class="fst-italic" id="review{{ review.id }}">
           {{ review.body | linebreaks }}
         </div> <hr>
         {% if user.is_authenticated and review.author == user %}

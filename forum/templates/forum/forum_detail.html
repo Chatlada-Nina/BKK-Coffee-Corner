@@ -19,7 +19,7 @@
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
+            <div class="card-body sub-text">
                 <!-- The forum content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">
@@ -28,6 +28,48 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Displaying count of comments -->
+  <div class="row">
+    <div class="col-12">
+      <strong class="text-secondary">
+        <i class="far fa-comments"></i> {{ comment_count }}
+      </strong>
+    </div>
+    <div class="col-12">
+      <hr>
+    </div>
+  </div>
+
+
+  <!-- Displaying Comments -->
+  <div class="row">
+    <div class="col-md-8 card mb-4 mt-3">
+      <h3 class="main-text">Comments:</h3>
+      <div class="card-body sub-text">
+        <!-- We want a for loop inside the empty control tags
+          to iterate through each comment in comments -->
+        {% for comment in comments %}
+        <div class="p-2 comments
+        {% if comment.author == user %}
+        faded{% endif %}">
+          <p class="fw-bold">
+            {{ comment.author }}
+            <span class="fw-light">
+              {{ comment.created_on }}
+            </span> wrote:
+          </p>
+          <div class="fst-italic" id="comment{{ comment.id }}">
+            {{ comment.body | linebreaks }}
+          </div> <hr>
+          
+        </div>
+        <!-- Our for loop ends here -->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock content %}

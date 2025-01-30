@@ -24,9 +24,15 @@ def forum_detail(request, slug):
 
     queryset = Forum.objects.order_by("created_on")
     forum = get_object_or_404(queryset, slug=slug)
+    comments = forum.comments.all().order_by("-created_on")
+    comment_count = forum.comments.count()
 
     return render(
         request,
         "forum/forum_detail.html",
-        {"forum": forum},
+        {
+            "forum": forum,
+            "comments": comments,
+            "comment_count": comment_count,
+        },
     )
