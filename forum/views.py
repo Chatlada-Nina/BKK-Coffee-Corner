@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Forum, Comment
 from .forms import CommentForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 class ForumList(generic.ListView):
@@ -95,3 +96,9 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('forum_detail', args=[slug]))
+
+
+# Create new forum views and request the logged-in user
+@login_required(login_url="/accounts/login/")
+def  forum_new(request):
+    return render(request, "forum/forum_new.html")
