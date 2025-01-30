@@ -55,6 +55,7 @@ def forum_detail(request, slug):
         },
     )
 
+#Create Edit for comment
 def comment_edit(request, slug, comment_id):
     """
     view to edit comments
@@ -74,5 +75,23 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('forum_detail', args=[slug]))
+
+
+#Create Delete view for comment
+def comment_delete(request, slug, comment_id):
+    """
+    view to delete comment
+    """
+    queryset = Forum.objects.order_by("-created_on")
+    forum = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('forum_detail', args=[slug]))
