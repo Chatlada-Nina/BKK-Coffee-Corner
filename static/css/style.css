@@ -18,43 +18,38 @@ body {
     padding-top: 120px;
 }
 
-/* Navigation bar */
 
+/* Navigation bar */
 .logo {
     max-width: 200px;
 }
-
 .navbar {
     background-color: var(--nav-color);
     color: var(--text-color);
     font-family: var(--primary-font);
 
 }
-
 .nav-item {
     padding: 0 10px 0 10px;
 }
-
 .nav-link {
     text-decoration: none;
     color: var(--text-color);
     font-size: 1.2rem;
     font-weight: 500;
 }
-
 .nav-link:hover {
     color: var(--text-hover-color);
     text-decoration: underline;
 }
-
 .navbar-toggler-icon {
     color: var(--text-color);
     font-size: 1.5rem;
 }
-
 .search-icon:hover {
     color: var(--text-hover-color);
 }
+
 
 /* Block Content */
 .main-text {
@@ -68,7 +63,6 @@ body {
 .main-text, .sub-text {
     color: var(--text-color);
 }
-
 .forum-link {
     color: var(--text-color);
 }
@@ -79,12 +73,10 @@ body {
     text-decoration: underline;
     color: var(--text-hover-color);
 }
-
 .post-info {
     font-family: var(--secondary-font);
     color: var(--text-color);
 }
-
 .page-link, .submit-btn {
     border: 1px solid var(--button-bg-color);
     background-color: var(--button-bg-color);
@@ -97,11 +89,11 @@ body {
     background-color: var(--button-hover-color);
     color: var(--button-text-color);
 }
-
 .edit-btn {
     text-decoration: underline;
     font-style: italic;
 }
+
 
 
 /* Footer */

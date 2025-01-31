@@ -7,7 +7,7 @@ class Forum(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="forum_posts")
     content = models.TextField()
-    created_on = models.DateField()
+    created_on = models.DateField(auto_now_add=True)
 
 # Add a Meta class to define order of contents
     class Meta:

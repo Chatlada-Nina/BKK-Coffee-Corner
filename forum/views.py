@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Forum, Comment
-from .forms import CommentForm
+from .forms import CommentForm, CreateForum
 from django.contrib.auth.decorators import login_required
+from . import forms
 
 # Create your views here.
 class ForumList(generic.ListView):
@@ -101,4 +102,14 @@ def comment_delete(request, slug, comment_id):
 # Create new forum views and request the logged-in user
 @login_required(login_url="/accounts/login/")
 def  forum_new(request):
-    return render(request, "forum/forum_new.html")
+    if request.method == "POST":
+        form = forms.CreateForum(request.POST)
+        if form.is_valid():
+            newforum = form.save(commit=False)
+            newforum.author = request.user
+            newforum.save()
+            return redirect("forum")
+    else:
+        form = forms.CreateForum()
+    form = forms.CreateForum()
+    return render(request, "forum/forum_new.html", {"form": form})
