@@ -92,9 +92,6 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#reviews">Reviews</a>
-            </li>
-            <li class="nav-item">
               <a
                 class="nav-link {% if request.path == forum_url %}active{% endif %}"
                 href="{% url 'forum' %}"
@@ -102,7 +99,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
@@ -130,17 +127,6 @@
             </li>
             {% endif %}
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn search-icon" type="submit">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
         </div>
       </div>
     </nav>

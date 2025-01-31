@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'home',
     'about',
     'forum',
+    'contact',
 ]
 # Add constants for Django could handle multiple sites from one database, redirection URLs to redirect us to home page after logged in and logged out.
 SITE_ID = 1
