@@ -3,16 +3,16 @@
 {% load static %}
 <div class="container mt-2">
     <div class="row justify-content-center g-4">
-        <div class="col-12 col-md-6">
-            <img src="{% static 'images/about-img.png' %}" width="75%" alt="about us" class="col-12 col-md-6">
+        <div class="col-12 col-md-6 text-center">
+            <img src="{% static 'images/about-img.png' %}" alt="about us" class="col-12 col-md-6 about-img">
         </div>
         <div class="col-12 col-md-6">
-            <h2>{{ about.title }}</h2>
-            {{ about.content | safe }}
+            <h2 class="main-text">{{ about.title }}</h2>
+            <p class="sub-text">{{ about.content | safe }}</p>
         </div>
         
         <div class="row">
-            <div class="col text-right">
+            <div class="col text-right mb-4">
                 <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
             </div>
         </div>
