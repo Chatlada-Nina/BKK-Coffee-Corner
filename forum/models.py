@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Forum(models.Model):
+    """
+    Store a single forum entry related to : model:`auth.User`.
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="forum_posts")
@@ -20,6 +23,9 @@ class Forum(models.Model):
 
 # Create Comment model
 class Comment(models.Model):
+    """
+    Store a single comment entry related to : model:`auth.User`and :model:`forum.Forum`.
+    """
     forum = models.ForeignKey(Forum, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
     created_on = models.DateField(auto_now_add=True)

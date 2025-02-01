@@ -1,5 +1,5 @@
-from .models import Comment, Forum
 from django import forms
+from .models import Comment, Forum
 
 
 # Create CommentForm that inherit from a built-in Django class.

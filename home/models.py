@@ -9,6 +9,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 # Create your models here.
 # Create Post Cafes model
 class Post(models.Model):
+    """
+    Store a single post entry related to : model:`auth.User`.
+    """
     cafename = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True, null=True)
     cafeinfo = models.TextField()
@@ -32,6 +35,9 @@ class Post(models.Model):
 
 # Create Review model
 class Review(models.Model):
+    """
+    Store a single review entry related to : model:`auth.User` and :model:`home.Post`.
+    """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="reviews")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviewer")
     created_on = models.DateField(auto_now_add=True)

@@ -2,9 +2,10 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from .models import Forum, Comment
 from .forms import CommentForm, CreateForum
-from django.contrib.auth.decorators import login_required
+
 from . import forms
 
 # Create your views here.
@@ -18,12 +19,16 @@ def forum_detail(request, slug):
     Display an individual :model:`forum.Forum`.
 
     **Context**
-
     ``forum``
         An instance of :model:`forum.Forum`.
+    ``comments``
+        All comments related to the forum.
+    ``comment_count``
+        A count of comments related to the forum.
+    ``comment_form``
+        An instance of :form:`forum.CommentForm`.
 
     **Template:**
-
     :template:`forum/forum_detail.html`
     """
 
@@ -60,7 +65,15 @@ def forum_detail(request, slug):
 #Create Edit for comment
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    Display an individual comment for edit.
+
+    **Context**
+    ``forum``
+        An instance of :model:`forum.Forum`.
+    ``comment``
+        A single comment related to the forum.
+    ``comment_form``
+        An instance of :form:`forum.CommentForm`.
     """
     if request.method == "POST":
 
@@ -84,7 +97,13 @@ def comment_edit(request, slug, comment_id):
 #Create Delete view for comment
 def comment_delete(request, slug, comment_id):
     """
-    view to delete comment
+    Delete an individual comment.
+    
+    **Context**
+    ``forum``
+        An instance of :model:`forum.Forum`.
+    ``comment``
+        A single comment related to the forum.
     """
     queryset = Forum.objects.order_by("-created_on")
     forum = get_object_or_404(queryset, slug=slug)
@@ -102,6 +121,16 @@ def comment_delete(request, slug, comment_id):
 # Create new forum views and request the logged-in user
 @login_required(login_url="/accounts/login/")
 def  forum_new(request):
+    """
+    Allow user to create a new forum.
+
+    **Context**
+    ``contact_form``
+        An instance of :form: `forum.form`.
+        
+    **Template:**
+    :template:`forum/forum_new.html`
+    """
     if request.method == "POST":
         form = forms.CreateForum(request.POST)
         if form.is_valid():

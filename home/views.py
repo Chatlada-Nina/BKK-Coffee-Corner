@@ -18,12 +18,16 @@ def post_detail(request, slug):
     Display an individual :model:`home.Post`.
 
     **Context**
-
     ``post``
         An instance of :model:`home.Post`.
-
+    ``reviews``
+        All reviews related to the post.
+    ``review_count``
+        A count of reviews related to the post.
+    ``review_form``
+        An instance of :form:`home.ReviewForm`.
+        
     **Template:**
-
     :template:`home/post_detail.html`
     """
 
@@ -59,7 +63,15 @@ def post_detail(request, slug):
 
 def review_edit(request, slug, review_id):
     """
-    view to edit reviews
+    Display an individual review for edit.
+
+    **Context**
+    ``post``
+        An instance of :model:`home.Post`.
+    ``review``
+        A single review related to the post.
+    ``review_form``
+        An instance of :form:`home.ReviewForm`.
     """
     if request.method == "POST":
 
@@ -81,7 +93,13 @@ def review_edit(request, slug, review_id):
 
 def review_delete(request, slug, review_id):
     """
-    view to delete review
+    Delete an individual review.
+    
+    **Context**
+    ``post``
+        An instance of :model:`home.Post`.
+    ``review``
+        A single review related to the post.
     """
     queryset = Post.objects.order_by("-created_on")
     post = get_object_or_404(queryset, slug=slug)
