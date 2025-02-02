@@ -37,10 +37,10 @@
         <!-- Cafe Information -->
         <div class="col-12 col-md-6">
             <h1 class="post-cafename main-text">{{ post.cafename }}</h1>
-            <p class="post-excerpt sub-text">{{ post.excerpt }}</p>
+            <p class="post-excerpt text-muted sub-text">"{{ post.excerpt }}"</p>
             <!-- <p class="post-excerpt">{{ review.rating }} | {{ review.count }} </p>-->
             <!-- Use safe filter to tell Django that this content is safe to be interpreted as HTML -->
-            <p class="post-info">{{ post.cafeinfo | safe }}</p>
+            <p class="post-info sub-text">{{ post.cafeinfo | safe }}</p>
         </div>
         <div class="col-12 col-md-6">
             <p class="post-address sub-text"><strong>Address: </strong><br>{{ post.address }}</p>
@@ -81,12 +81,12 @@
         </p>
         <div class="fst-italic" id="review{{ review.id }}">
           {{ review.body | linebreaks }}
-        </div> <hr>
+        </div> 
         {% if user.is_authenticated and review.author == user %}
-        <button class="btn btn-delete" review_id="{{ review.id }}">Delete</button>
-        <button class="btn btn-edit" review_id="{{ review.id }}">Edit</button>
+        <button class="btn btn-delete btn-danger btn-sm" review_id="{{ review.id }}">Delete</button>
+        <button class="btn btn-edit btn-success btn-sm" review_id="{{ review.id }}">Edit</button>
         {% endif %}
-      </div>
+      </div> <hr>
       <!-- Our for loop ends here -->
       {% endfor %}
     </div>

@@ -157,7 +157,7 @@
 
     <main class="flex-shrink-0 main-bg sub-text">
       {% if user.is_authenticated %}
-      <p class="text-end m-1 p-1 text-muted">You are logged in as {{ user }}</p>
+      <p class="text-end px-3 text-muted">Hello, {{ user }} <i class="fa-solid fa-user"></i> </p>
       {% else %}
       <p class="text-end m-1 p-1 text-muted">You are not logged in</p>
       {% endif %} {% block content %}

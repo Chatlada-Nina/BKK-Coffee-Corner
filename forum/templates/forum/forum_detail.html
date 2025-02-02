@@ -64,12 +64,12 @@
           </p>
           <div class="fst-italic" id="comment{{ comment.id }}">
             {{ comment.body | linebreaks }}
-          </div> <hr>
+          </div>
           {% if user.is_authenticated and comment.author == user %}
-          <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-          <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+          <button class="btn btn-delete btn-danger btn-sm" comment_id="{{ comment.id }}">Delete</button>
+          <button class="btn btn-edit btn-success btn-sm" comment_id="{{ comment.id }}">Edit</button>
           {% endif %}
-        </div>
+        </div> <hr>
         <!-- Our for loop ends here -->
         {% endfor %}
       </div>
@@ -87,7 +87,7 @@
             {{ comment_form | crispy }}
             {% csrf_token %}
             <button id="submitButton" type="submit"
-              class="btn btn-signup btn-lg">Submit</button>
+              class="btn submit-btn btn-signup btn-lg">Submit</button>
           </form>
           {% else %}
           <p>Log in to leave a comment</p>
