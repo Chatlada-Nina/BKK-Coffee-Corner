@@ -18,45 +18,44 @@ body {
     padding-top: 120px;
 }
 
-/* Navigation bar */
 
+/* Navigation bar */
 .logo {
     max-width: 200px;
 }
-
 .navbar {
     background-color: var(--nav-color);
     color: var(--text-color);
     font-family: var(--primary-font);
-
 }
-
 .nav-item {
     padding: 0 10px 0 10px;
 }
-
 .nav-link {
     text-decoration: none;
     color: var(--text-color);
     font-size: 1.2rem;
     font-weight: 500;
 }
-
 .nav-link:hover {
     color: var(--text-hover-color);
     text-decoration: underline;
 }
-
 .navbar-toggler-icon {
     color: var(--text-color);
     font-size: 1.5rem;
 }
-
 .search-icon:hover {
     color: var(--text-hover-color);
 }
 
+
 /* Block Content */
+.about-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
 .main-text {
     font-family: var(--primary-font);
     font-weight: 700;
@@ -68,37 +67,45 @@ body {
 .main-text, .sub-text {
     color: var(--text-color);
 }
-
-.post-link{
+.forum-link {
+    color: var(--text-color);
+}
+.post-link, .forum-link{
     text-decoration: none;
 }
-.post-link:hover {
+.post-link:hover, .forum-link:hover {
     text-decoration: underline;
     color: var(--text-hover-color);
 }
-
 .post-info {
     font-family: var(--secondary-font);
     color: var(--text-color);
 }
-
-.page-link {
+.page-link, .submit-btn {
     border: 1px solid var(--button-bg-color);
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     border-radius: 20px;
     padding: 10px 20px;
 }
-.page-link:hover {
+.page-link:hover, submit-btn:hover {
     border: 1px solid var(--button-hover-color);
     background-color: var(--button-hover-color);
     color: var(--button-text-color);
 }
-
 .edit-btn {
     text-decoration: underline;
     font-style: italic;
 }
+.btn-delete {
+    border: 1px solid orangered;
+    background-color: orangered;
+    color: var(--button-text-color);
+}
+.btn-edit {
+
+}
+
 
 
 /* Footer */
