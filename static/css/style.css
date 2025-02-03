@@ -93,18 +93,7 @@ body {
     background-color: var(--button-hover-color);
     color: var(--button-text-color);
 }
-.edit-btn {
-    text-decoration: underline;
-    font-style: italic;
-}
-.btn-delete {
-    border: 1px solid orangered;
-    background-color: orangered;
-    color: var(--button-text-color);
-}
-.btn-edit {
 
-}
 
 
 

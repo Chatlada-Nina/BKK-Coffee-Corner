@@ -145,11 +145,21 @@ def  forum_new(request):
     return render(request, "forum/forum_new.html", {"form": form})
 
 
+# Edit a forum
 def forum_edit(request, forum_id):
+    """
+    Display an individual forum for edit.
+
+    **Context**
+    ``forum``
+        An instance of :model:`forum.Forum`.
+    ``form``
+        An instance of :form:`forum.CreateForum`.
+    """
     forum = Forum.objects.get(pk=forum_id)
     form = CreateForum(request.POST or None, instance=forum)
 
-    if form.is_valid():
+    if form.is_valid() and forum.author == request.user:
         form.save()
         messages.add_message(request, messages.SUCCESS, 'Forum Updated!')
         return redirect('forum')
@@ -157,3 +167,22 @@ def forum_edit(request, forum_id):
     return render(request, 'forum/forum_edit.html', 
                     {'forum': forum,
                     'form': form})
+
+
+# Delete a forum
+def forum_delete(request, forum_id):
+    """
+    Delete a forum.
+    
+    **Context**
+    ``forum``
+        An instance of :model:`forum.Forum`.
+    """
+    forum = get_object_or_404(Forum, pk=forum_id)
+
+    if forum.author == request.user:
+        forum.delete()
+        messages.add_message(request, messages.SUCCESS, 'Forum deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own forums!')
+    return HttpResponseRedirect(reverse('forum'))

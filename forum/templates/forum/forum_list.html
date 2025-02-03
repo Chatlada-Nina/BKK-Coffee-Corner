@@ -12,12 +12,17 @@
   </div>
 
       {% for forum in object_list %}
-      <div class="row justify-content-start">
-        <a href="{% url 'forum-detail' forum.slug %}" class="forum-link">
-        <h4 class="main-text">{{forum.title}} ... <i class="fa-regular fa-comments fs-5"></i></h4>
-        <p>by: {{forum.author}} | {{forum.created_on}} </p></a>
+      <div class="row">
+        <div class="col-10">
+          <a href="{% url 'forum-detail' forum.slug %}" class="forum-link">
+          <h4 class="main-text">{{forum.title}} ... <i class="fa-regular fa-comments fs-5"></i></h4>
+          <p>by: {{forum.author}} | {{forum.created_on}} </p></a>
+        </div>
         {% if user.is_authenticated and forum.author == user %}
-        <a class="forum-link btn-sm px-4" title="Edit" href="{% url 'forum-edit' forum.id %}"><i class="fa-solid fa-pen"></i></a>
+        <div class="col-2">
+          <a class="forum-link btn-sm px-3" title="Edit" href="{% url 'forum-edit' forum.id %}"><i class="fa-solid fa-pen"></i></a>
+          <a href="{% url 'forum-delete' forum.id %}" class="forum-delete text-muted btn-sm" title="Delete"><i class="fa-solid fa-trash"></i></a>
+        </div>
         {% endif %}
         <hr>
       {% endfor %}
@@ -28,6 +33,9 @@
   <div class="row justify-content-center my-4">
     <a href="{% url 'new-forum' %}" class="forum-link text-end">
     <p class="main-text">Create new topic here <i class="fa-solid fa-plus"></i></p></a>
+  </div>
+
+
 </div>
 
 
