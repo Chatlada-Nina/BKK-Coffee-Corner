@@ -10,7 +10,7 @@ from . import forms
 
 # Create your views here.
 class ForumList(generic.ListView):
-    queryset = Forum.objects.all()
+    queryset = Forum.objects.order_by("-created_on")
     template_name = "forum_list.html"
 
 
@@ -91,7 +91,7 @@ def comment_edit(request, slug, comment_id):
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
 
-    return HttpResponseRedirect(reverse('forum_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('forum-detail', args=[slug]))
 
 
 #Create Delete view for comment
@@ -115,7 +115,7 @@ def comment_delete(request, slug, comment_id):
     else:
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
-    return HttpResponseRedirect(reverse('forum_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('forum-detail', args=[slug]))
 
 
 # Create new forum views and request the logged-in user
@@ -137,8 +137,23 @@ def  forum_new(request):
             newforum = form.save(commit=False)
             newforum.author = request.user
             newforum.save()
+            messages.add_message(request, messages.SUCCESS, 'Forum Submitted!')
             return redirect("forum")
     else:
         form = forms.CreateForum()
     form = forms.CreateForum()
     return render(request, "forum/forum_new.html", {"form": form})
+
+
+def forum_edit(request, forum_id):
+    forum = Forum.objects.get(pk=forum_id)
+    form = CreateForum(request.POST or None, instance=forum)
+
+    if form.is_valid():
+        form.save()
+        messages.add_message(request, messages.SUCCESS, 'Forum Updated!')
+        return redirect('forum')
+    
+    return render(request, 'forum/forum_edit.html', 
+                    {'forum': forum,
+                    'form': form})

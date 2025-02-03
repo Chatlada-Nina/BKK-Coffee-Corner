@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+
+{% load static %} 
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <h2 class="main-text my-4 text-center">Forum <span class="fw-light text-decoration-underline">Updating </span></h2>
+    <div class="col-10 col-md-6">
+      <form class="row justify-content-center g-2" action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <div class="text-center p-4"><button class="submit-btn">Update</button></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
