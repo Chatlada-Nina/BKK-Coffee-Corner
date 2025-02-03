@@ -93,6 +93,9 @@ body {
     background-color: var(--button-hover-color);
     color: var(--button-text-color);
 }
+.error {
+    font-size: 5rem;
+}
 
 
 

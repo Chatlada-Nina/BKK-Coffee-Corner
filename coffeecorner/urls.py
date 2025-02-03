@@ -27,3 +27,7 @@ urlpatterns = [
     path("forum/", include("forum.urls"), name="forum-urls"),
     path('', include("home.urls"), name="home-urls"),
 ]
+
+# Error handlers underneath urlpatturns
+handler404 = "coffeecorner.views.handler404"
+handler500 = "coffeecorner.views.handler500"
