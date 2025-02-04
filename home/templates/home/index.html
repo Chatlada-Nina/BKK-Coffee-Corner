@@ -30,10 +30,10 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
+                                {% if "placeholder" in post.featured_image_1.url %}
                                 <img class="card-img-top" src="{% static 'images/cafe1.jpg' %}" alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                                <img class="card-img-top" src=" {{ post.featured_image_1.url }}"
                                 alt="{{ post.cafename }}">
                                 {% endif %}
                                 <div class="image-flash"></div>
