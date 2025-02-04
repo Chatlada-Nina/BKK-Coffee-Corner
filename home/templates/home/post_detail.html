@@ -79,6 +79,7 @@
             {{ review.created_on }}
           </span> wrote:
         </p>
+        <p class="rating"><i class="fa-solid fa-star"></i>  {{ review.rating }}</p>
         <div class="fst-italic" id="review{{ review.id }}">
           {{ review.body | linebreaks }}
         </div> 

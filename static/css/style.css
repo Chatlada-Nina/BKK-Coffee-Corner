@@ -93,9 +93,20 @@ body {
     background-color: var(--button-hover-color);
     color: var(--button-text-color);
 }
+
+.rating {
+    display: inline-flex;
+    border: 1px solid sandybrown;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: sandybrown;
+    color: white;
+
+}
 .error {
     font-size: 5rem;
 }
+
 
 
 

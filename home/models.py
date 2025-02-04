@@ -40,10 +40,17 @@ class Review(models.Model):
     """
     Store a single review entry related to : model:`auth.User` and :model:`home.Post`.
     """
+    RATING_CHOICES = (
+        ('1', '1'),
+        ('2', '2'),
+        ('3', '3'),
+        ('4', '4'),
+        ('5', '5'),
+    )
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="reviews")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviewer")
     created_on = models.DateField(auto_now_add=True)
-    rating = models.IntegerField()
+    rating = models.CharField(max_length=1, choices=RATING_CHOICES)
     body = models.TextField()
     image = models.ImageField(blank=True)
 
