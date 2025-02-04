@@ -1,131 +1,102 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# BKK Coffee Corner
 
-Welcome Chatlada Juntarawanichkul,
+— SCREENSHOT OF RESPONSIVE SCREEN —
+![The website shown on a variety of screen sizes](/documentation/readme/screen-responsive.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+**Welcome to BKK Coffee Corner!!**
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+**BKK Coffee Corner** is the community platform where coffee lovers can find local coffee shops and cafes, read and leave reviews, post anything’s coffee in forums and so on. The site owner can gather data on local coffee shops trends and support local commerce. This project could create a thriving community of coffee lovers and provide value to users and the site owner.
+Whether you have a deep passion for coffee or simply savor the cozy atmosphere of a café, you'll find friends here. So, settle into a comfy chair, grab a cup of coffee, and join the conversation. Share your coffee experiences, post pictures, and engage with fellow enthusiasts.☕️🌍📸
 
-## Gitpod Reminders
+![GitHub last commit](https://img.shields.io/github/last-commit/chatlada-nina/TheGuessWordGame?color=darkcyan&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/chatlada-nina/TheGuessWordGame?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/chatlada-nina/TheGuessWordGame?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/chatlada-nina/TheGuessWordGame?color=yellow&style=for-the-badge)
+![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fchatlada-nina.github.io%2FTheGuessWordGame%2F&style=for-the-badge)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+— CONTENT SECTION —
 
-`python3 -m http.server`
+## CONTENTS
 
-A blue button should appear to click: _Make Public_,
+- [UX - User Experience](#ux)
 
-Another blue button should appear to click: _Open Browser_.
+  - [Wireframes](#wireframes)
+  - [Colours Theme](#colours-theme)
+  - [Typography](#typography)
+  - [User stories](#user-stories)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+- [Features](#features)
 
-A blue button should appear to click: _Make Public_,
+  - [Header](#header)
+  - [Home page](#home-page)
+  - [The Game Section](#the-game-section)
+  - [Notified Pop-up](#notified-pop-up)
+  - [Game Over](#game-over)
+  - [The Footer](#the-footer)
+  - [Features left to implement](#features-left-to-implement)
 
-Another blue button should appear to click: _Open Browser_.
+- [Testing](#testing)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  - [Bugs discovered](#bugs-discovered)
 
-To log into the Heroku toolbelt CLI:
+- [Deployment & Local deployment](#deployment-&-Local-deployment)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  - [Deployment](#deployment)
+  - [Local Deployment](#local-deployment)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+- [Credits](#credits)
+  - [Content](#contents)
+  - [Media](#media)
+  - [Code](#code)
+  - [Acknowledgments](#acknowledgments)
 
-### Connecting your Mongo database
+## UX
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### User’s Goal
 
-------
+Users want to discover new coffee shops and cafes in their local area, read reviews, find opening hours, and explore what each venue has to offer. They seek a platform that provides detailed information, user-generated content, and an easy way to plan visits.
 
-## Release History
+### Owner’s Goal
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The site owner aims to build a comprehensive list of local coffee shops and cafes, attracting coffee enthusiasts who frequently visit the site. By providing this service, the owner can gather valuable data on coffee shop trends, promote their own favorite cafes, and potentially monetize through partnerships, sponsored listings, or advertisements.
 
-**June 18, 2024,** Add Mongo back into template
+### User stories
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+1. As a new user, I can create an account so that I can access the cafe's community features, reviews, posts and comments.
+2. As a site visitor, I can click on the Community page so that I can read topics and see what the trends are on the site.
+   3.As a site visitor, I can click on the About link so that I can read about the site.
+3. As a site visitor, I can use the 'Contact Us' feature to get in touch with the admin of the page so that I can ask questions or provide feedback.
+4. As a member, I can sign in to the webpage so that I can access my account and enjoy customized features and contents.
+5. As a community member, I can participate in forum discussions so that I can share ideas, ask questions, and engage with other cafe enthusiasts.
+6. As an Admin of the page I can edit the About content so that the content stays updated with the previous information.
+7. As an admin I can manage posts on the site so that the cafes and coffee shop information stay updated and accurate.
 
-**May 28 2024:** Fix Mongo and Links installs
+User Stories and Acceptance Criteria help me ensure each feature meets the desired functionality and user experience.
 
-**April 26 2024:** Update node version to 16
+### Wireframes
 
-**September 20 2023:** Update Python version to 3.9.17.
+[Home](/documentation/wireframe/homepage.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+[About page](/documentation/wireframe/gamepage.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+[Cafe Details page](/documentation/wireframe/gameover-page.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+[Forum page](/documentation/wireframe/404page.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+[Sign in page](/documentation/wireframe/404page.png)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+[Sign up page](/documentation/wireframe/404page.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+[sign out page](/documentation/wireframe/404page.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Colours Theme
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The BKK Coffee Corner page is a user-friendly website and it's about coffee! so the main colours I chose are brown and beige, warm and invited tones. I used Maroon color for buttons to make it outstanding. Moreover, I used [WebAIM:Contrast Checker](https://webaim.org/) to check the contrast of my colours to ensure they are easy to read for users.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![The colour theme of the website](/documentation/readme/color-theme.png)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Typography
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+I used [League Spartan](https://fonts.google.com/specimen/Poppins) pairing with [Lora](https://fonts.google.com/specimen/Poppins) because Lora contrasts nicely with the bold, modern look of Spartan. The elegant and traditional feel complements strong contemporary aesthetic combination two fonts creates visually appealing harmonious design.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+Additionally, I use [Font Awesome](https://fontawesome.com/) for icons to make the site casual and friendly and for my social media icons in the footer to help users quickly and easily identify my social media sites.
