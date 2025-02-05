@@ -13,20 +13,22 @@
 
       {% for forum in object_list %}
       <div class="row">
-        <div class="col-10">
+        <div class="col-auto">
           <a href="{% url 'forum-detail' forum.slug %}" class="forum-link">
           <h4 class="main-text">{{forum.title}} ... <i class="fa-regular fa-comments fs-5"></i></h4>
           <p>by: {{forum.author}} | {{forum.created_on}} </p></a>
         </div>
         {% if user.is_authenticated and forum.author == user %}
-        <div class="col-2">
+        <div class="col-auto">
           <a class="forum-link btn-sm px-3" title="Edit" href="{% url 'forum-edit' forum.id %}"><i class="fa-solid fa-pen"></i></a>
-          <a href="{% url 'forum-delete' forum.id %}" class="forum-delete text-muted btn-sm" title="Delete"><i class="fa-solid fa-trash"></i></a>
-        </div>
+          
+          <button class="btn btn-delete btn-danger btn-sm" forum_id="{{ forum.id }}">Delete</button>
         {% endif %}
+        </div>
         <hr>
-      {% endfor %}
       </div>
+      {% endfor %}
+      
   </div>
 
   <!-- Create new forum here -->
@@ -35,8 +37,38 @@
     <p class="main-text">Create new topic here <i class="fa-solid fa-plus"></i></p></a>
   </div>
 
+</div>
 
+<!-- Delete Forum confirmation modal -->
+ 
+<div class="modal fade" id="deleteModal" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="deleteModalLabel">Delete forum?</h5>
+        <button type="button" class="btn-close"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your forum?
+        This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"
+          data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn
+          btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 
+{% endblock %}
+
+<!-- Add script from forums.js -->
+{% block extra %}
+<script src="{% static 'js/forums.js' %}"></script>
 {% endblock %}
