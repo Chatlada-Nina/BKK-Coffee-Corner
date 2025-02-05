@@ -5,19 +5,20 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="container-fluid">
+<div class="container">
     <div class="row justify-content-center">
         <div class="call-for-action col-md-10">
             <div class="banner text-center">
                 <img src="{% static 'images/banner.jpg' %}" alt="banner" width="90%">
             </div>
             <div class="description text-center my-5">
-            <h2 class="main-text mb-4">Welcome to <span class="fw-light text-decoration-underline">BKK Coffee Corner</span>☕</h2>
-            <p class="sub-text fs-5">
+                <h2 class="main-text mb-4">Welcome to <span class="fw-light text-decoration-underline">BKK Coffee Corner</span>☕</h2>
+                <p class="sub-text fs-5">
                 We're the go-to community page for coffee lovers and café explorers in Bangkok. Whether you're an experienced coffee enthusiast or just starting your journey, this is the place for you.Here, you can read reviews, share experiences, and dive into all things coffee. We aim to create a welcoming space for everyone.
                 Join us on a caffeinated adventure—discover hidden gems, share your finds, and stay updated with the latest coffee trends. BKK Coffee Corner is more than a page—it's a community for those who love coffee and exploring new places. Let's celebrate the joy of coffee together!   
-            </p>
-        </div>
+                </p>
+                <a href="{% url 'account_signup' %}" class="submit-btn">Join us!</a>
+            </div>
         </div> <hr>
         <!-- Post all Cafes section -->
         <div id="reviews" class="row">
