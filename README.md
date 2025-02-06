@@ -126,7 +126,7 @@ This project was designed using Agile methodology, utilising the Project Board a
 
 ### Navigation Bar
 
-- The full responsive navigation bar includes BKK Coffee Corner logo that link to the Home page, About us, Community, Contact, Register and Login page and is identical on each page to allow users for easy navigation at all time.
+- The full responsive navigation bar includes the BKK Coffee Corner logo that link to the Home page, About us, Community, Contact, Register and Login page and is identical on each page to allow users for easy navigation at all time.
 
 - The pictures below show the Navigation bar in different actions on the page.
 
@@ -141,43 +141,53 @@ Dropdown navigation menu on mobile screen size:<br>
 
 ### Home Page
 
-The Home Page serves as an inviting introduction to the BKK Coffee Corner with a captivating image and a clear call-to-action button "Join us" leading to the sign-up page. Following by the Cafes reviews section displays in card that preview a picture of a cafe, Cafes name,an excerpt and read reviews link keeping content fresh and engaging for all visitors. The sticky navigation bar follow along when user scrolling down offering easy navigation across the site at all time.
+- The Home Page serves as an inviting introduction to the BKK Coffee Corner with a captivating image and a clear call-to-action button "Join us" leading to the sign-up page. The Cafes reviews section displays in cards that preview a picture of a cafe, Cafes name,an excerpt and read reviews link keeping content fresh and engaging for all visitors. The sticky navigation bar follows along when the user scrolls down offering easy navigation across the site at all times.
 
 ![Home Page](documentation/readme/home-page.png)
+
+- This Cafe reviews section is a part of the home page that shows all the cafes the site has updated. Every card included an image, cafe's name,an excerpt and a Read reviews button to navigate to the Cafe details and reviews page if the users want to read or write reviews immediately.
 
 ![Cafe reviews section](documentation/readme/cafe-reviews-section.png)
 
 ### About Us Page
 
-The About Us page introduces The BKK Coffee Corner goals, explaining the importance of community and knowledge-sharing for coffee enthusiasts and anyone who love exploring new cafes and coffee shops in Bangkok. It helps new users understand the site's goals and encourages them to join.
+- The About Us page introduces The BKK Coffee Corner goals, explaining the importance of community and knowledge-sharing for coffee enthusiasts and anyone who loves exploring new cafes and coffee shops in Bangkok. It helps new users understand the site's goals and encourages them to join.
 
 ![About Us](documentation/readme/about-us.png)
 
 ### Cafe Details Page
 
+- The cafe details page shows the full information about the cafe and its reviews. The carousel shows cafe's images, Cafe's name, Cafe's description, Address, phone number and opening time for users who want to plan visiting that cafe.
+
 ![Cafe Details](documentation/readme/cafe-details.png)
 
 ### Cafe Details-reviews Page
 
+- This cafe reviews section is a part of the cafe details page, this allows the new and old users to feel more confident to decide to visit the cafe. The customer review section is simple but concise, it shows user name, review date, rating and review. I make the reviews visible for everyone; however, only members can write the review.
+
 ![Cafe Details-reviews ](documentation/readme/cafe-details-review.png)
 
-When you are logged in as a member, you will be able to perform "CRUD Operations" Create, Read, Update and Delete your reviews.
+- When you are logged in as a member, you will be able to perform "CRUD Operations" Create, Read, Update and Delete your reviews.
 
 ![Cafe Reviews as a member ](documentation/readme/cafe-review-member.png)
 
 ### Community Page
 
+- The community page or Forum page allows users to read or write comments to existing forums or create a new topic. The page shows a title, an author and date where users can click on them and will link to the forum details page. Additionally, there is a link "Create new topic here" on the right side of the page to encourage users to create a new topic as they want.
+
 ![Community](documentation/readme/community.png)
 
-When you are logged in and clicked on "Create new topic here+" it will direct you to the create Forum Form.
+- When you are logged in and clicked on "Create new topic here+" it will direct you to the create Forum Form.
 
 ![Create Forum form](documentation/readme/forum-form.png)
 
-When you are logged in and you are the author of a forum you will be able to perform "CRUD Operations" Create, Read, Update and Delete your forums the same way as the reviews.
+- When you are logged in and you are the author of a forum you will be able to perform "CRUD Operations" Create, Read, Update and Delete your forums the same way as the reviews.
 
 ![Create Forum form](documentation/readme/forum-member.png)
 
 ### Sign up Page
+
+- The sign up page includes standard registration fields. Once user is registered, the success pop-up will displayed and user will automatically logged in.
 
 ![Sign up](documentation/readme/signup.png)
 
@@ -191,11 +201,13 @@ When you are logged in and you are the author of a forum you will be able to per
 
 ### Contact us Page
 
+- The contact us page provides a direct way for users to contact with feedback or inquiries. Ensure users feel supported and have access to give feedback to the owner site, including inquiry of corporation partners.
+
 ![Contact us](documentation/readme/contactus.png)
 
 ### Notified Pop-up Page
 
-The notified Pop-up allows users to get a confirmation of each action on the website. When users write a review or edit or delete, the notified pop-up will display to confirm those actions same as in the Forum page.
+- The notified Pop-up allows users to get a confirmation of each action on the website. When users write a review or edit or delete, the notified pop-up will display to confirm those actions same as in the Forum page.
 
 - A pop-up to inform users that the review or forum is submitted.
 
@@ -215,12 +227,16 @@ The notified Pop-up allows users to get a confirmation of each action on the web
 
 ### The Footer Page
 
+- The footer section includes the logo, a brief description, the contact us info, address, phone number, email and social media sites for users.
+  The social media links are shown in the icon and when users click on them, they will open in a new tab which makes it easy for the users to keep connected via social media.
+
 ![The Footer](documentation/readme/footer.png)
 
 ### Custom Error Handler Page
 
-![Custom Error 404 Handler](documentation/readme/custom-error404.png)
-![Custom Error 500 Handler](documentation/readme/custom-error500.png)
+- Custom error page to ensure user-friendly navigation in any unexpected situations.
+
+![Custom Error 404 Handler](documentation/readme/404page.png)
 
 ### Features left to implement
 
