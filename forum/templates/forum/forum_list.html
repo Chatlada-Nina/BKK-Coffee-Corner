@@ -7,9 +7,9 @@
 <div class="container-fluid">
   <div class="row">
     <h2 class="main-text my-4 text-center">Forum <span class="fw-light text-decoration-underline">let's talk!</span></h2>
-    <div class="banner text-center mb-4">
-      <img src="{% static 'images/banner.jpg' %}" alt="banner" width="90%">
-  </div>
+      <div class="text-center mb-4">
+        <img class="banner" src="{% static 'images/banner.jpg' %}" alt="banner">
+      </div>
 
       {% for forum in object_list %}
       <div class="row">
@@ -21,10 +21,9 @@
         {% if user.is_authenticated and forum.author == user %}
         <div class="col-auto my-2">
           <a class="forum-link btn-sm px-3" title="Edit" href="{% url 'forum-edit' forum.id %}"><i class="fa-solid fa-pen"></i></a>
-          
           <button class="btn btn-delete btn-danger btn-sm" forum_id="{{ forum.id }}">Delete</button>
-        {% endif %}
         </div>
+        {% endif %}
         <hr>
       </div>
       {% endfor %}
