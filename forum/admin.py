@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Forum, Comment
 from django_summernote.admin import SummernoteModelAdmin
+from .models import Forum, Comment
+
 
 # Give the admin panel greater functionality and clarity.
 @admin.register(Forum)

@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from PIL import Image
 
 # A draft is defined as zero and published as one. (From the I think therefore I blog CL project)
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -52,7 +51,6 @@ class Review(models.Model):
     created_on = models.DateField(auto_now_add=True)
     rating = models.CharField(max_length=1, choices=RATING_CHOICES)
     body = models.TextField()
-    image = models.ImageField(blank=True)
 
 
     # Add a Meta class to define order of reviews
