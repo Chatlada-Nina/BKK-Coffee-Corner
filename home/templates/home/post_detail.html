@@ -40,7 +40,7 @@
             <p class="post-excerpt text-muted sub-text">"{{ post.excerpt }}"</p>
             <!-- <p class="post-excerpt">{{ review.rating }} | {{ review.count }} </p>-->
             <!-- Use safe filter to tell Django that this content is safe to be interpreted as HTML -->
-            <p class="post-info sub-text">{{ post.cafeinfo | safe }}</p>
+            <div class="post-info sub-text">{{ post.cafeinfo | safe }}</div>
         </div>
         <div class="col-12 col-md-6">
             <p class="post-address sub-text"><strong>Address: </strong><br>{{ post.address }}</p>

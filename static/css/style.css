@@ -11,6 +11,7 @@
     --button-hover-color: #ae6087;
 }
 
+
 /* Global styles */
 body {
     background-color: var(--background-color);
@@ -55,7 +56,6 @@ body {
 .banner {
     width: 90%;
 }
-
 .about-img {
     width: 100%;
     max-width: 400px;
@@ -99,7 +99,6 @@ body {
     background-color: var(--button-hover-color);
     color: var(--button-text-color);
 }
-
 .rating {
     display: inline-flex;
     border: 1px solid sandybrown;
@@ -107,13 +106,10 @@ body {
     border-radius: 10px;
     background-color: sandybrown;
     color: white;
-
 }
 .error {
     font-size: 5rem;
 }
-
-
 
 
 
