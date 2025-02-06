@@ -157,13 +157,25 @@ The About Us page introduces The BKK Coffee Corner goals, explaining the importa
 
 ![Cafe Details](documentation/readme/cafe-details.png)
 
-### Cafe Details Page
+### Cafe Details-reviews Page
 
-![Cafe Details](documentation/readme/cafe-details.png)
+![Cafe Details-reviews ](documentation/readme/cafe-details-review.png)
+
+When you are logged in as a member, you will be able to perform "CRUD Operations" Create, Read, Update and Delete your reviews.
+
+![Cafe Reviews as a member ](documentation/readme/cafe-review-member.png)
 
 ### Community Page
 
 ![Community](documentation/readme/community.png)
+
+When you are logged in and clicked on "Create new topic here+" it will direct you to the create Forum Form.
+
+![Create Forum form](documentation/readme/forum-form.png)
+
+When you are logged in and you are the author of a forum you will be able to perform "CRUD Operations" Create, Read, Update and Delete your forums the same way as the reviews.
+
+![Create Forum form](documentation/readme/forum-member.png)
 
 ### Sign up Page
 
@@ -172,6 +184,10 @@ The About Us page introduces The BKK Coffee Corner goals, explaining the importa
 ### Sign in Page
 
 ![Sign in](documentation/readme/signin.png)
+
+### Sign out Page
+
+![Sign out](documentation/readme/signout.png)
 
 ### Contact us Page
 
