@@ -51,6 +51,11 @@ body {
 
 
 /* Block Content */
+
+.banner {
+    width: 90%;
+}
+
 .about-img {
     width: 100%;
     max-width: 400px;
