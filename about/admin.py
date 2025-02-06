@@ -7,6 +7,9 @@ from .models import About
 # Add @admin.register() decorator 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
+    """
+    Customizes the Django admin interface for the About model.
+    """
     summernote_fields = ('content',)
 
 

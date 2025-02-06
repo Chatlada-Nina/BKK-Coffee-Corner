@@ -6,7 +6,9 @@ from .models import Post, Review
 # Add @admin.register() decorator 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-
+    """
+    Customizes the Django admin interface for the Post model.
+    """
     list_display = ("cafename", "slug", "status", "created_on")
     search_fields = ["cafename"]
     list_filter = ("status", "created_on",)

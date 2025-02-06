@@ -6,6 +6,9 @@ from .models import Forum, Comment
 # Give the admin panel greater functionality and clarity.
 @admin.register(Forum)
 class ForumAdmin(SummernoteModelAdmin):
+    """
+    Customizes the Django admin interface for the Forum model.
+    """
 
     list_display = ('title', 'author', 'created_on')
     search_fields = ['title']
