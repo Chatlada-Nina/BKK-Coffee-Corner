@@ -84,8 +84,8 @@
           {{ review.body | linebreaks }}
         </div> 
         {% if user.is_authenticated and review.author == user %}
-        <button class="btn btn-delete btn-danger btn-sm" review_id="{{ review.id }}">Delete</button>
-        <button class="btn btn-edit btn-success btn-sm" review_id="{{ review.id }}">Edit</button>
+        <button class="btn btn-delete btn-danger btn-sm" data-review_id="{{ review.id }}">Delete</button>
+        <button class="btn btn-edit btn-success btn-sm" data-review_id="{{ review.id }}">Edit</button>
         {% endif %}
       </div> <hr>
       <!-- Our for loop ends here -->

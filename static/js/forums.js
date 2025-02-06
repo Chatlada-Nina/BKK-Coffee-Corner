@@ -15,7 +15,7 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 */
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
-      let forumId = e.target.getAttribute("forum_id");
+      let forumId = e.target.getAttribute("data-forum_id");
       deleteConfirm.href = `delete_forum/${forumId}`;
       deleteModal.show();
     });

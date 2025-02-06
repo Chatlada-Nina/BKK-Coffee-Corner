@@ -21,7 +21,7 @@
         {% if user.is_authenticated and forum.author == user %}
         <div class="col-auto my-2">
           <a class="forum-link btn-sm px-3" title="Edit" href="{% url 'forum-edit' forum.id %}"><i class="fa-solid fa-pen"></i></a>
-          <button class="btn btn-delete btn-danger btn-sm" forum_id="{{ forum.id }}">Delete</button>
+          <button class="btn btn-delete btn-danger btn-sm" data-forum_id="{{ forum.id }}">Delete</button>
         </div>
         {% endif %}
         <hr>
