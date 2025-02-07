@@ -9,6 +9,8 @@ from .forms import CommentForm, CreateForum
 from . import forms
 
 # Create your views here.
+
+
 class ForumList(generic.ListView):
     queryset = Forum.objects.order_by("-created_on")
     template_name = "forum_list.html"
@@ -62,7 +64,9 @@ def forum_detail(request, slug):
         },
     )
 
-#Create Edit for comment
+# Create Edit for comment
+
+
 def comment_edit(request, slug, comment_id):
     """
     Display an individual comment for edit.
@@ -89,16 +93,19 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('forum-detail', args=[slug]))
 
 
-#Create Delete view for comment
+# Create Delete view for comment
+
+
 def comment_delete(request, slug, comment_id):
     """
     Delete an individual comment.
-    
+
     **Context**
     ``forum``
         An instance of :model:`forum.Forum`.
@@ -113,21 +120,22 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('forum-detail', args=[slug]))
 
 
 # Create new forum views and request the logged-in user
 @login_required(login_url="/accounts/login/")
-def  forum_new(request):
+def forum_new(request):
     """
     Allow user to create a new forum.
 
     **Context**
     ``contact_form``
         An instance of :form: `forum.form`.
-        
+
     **Template:**
     :template:`forum/forum_new.html`
     """
@@ -163,17 +171,17 @@ def forum_edit(request, forum_id):
         form.save()
         messages.add_message(request, messages.SUCCESS, 'Forum Updated!')
         return redirect('forum')
-    
-    return render(request, 'forum/forum_edit.html', 
-                    {'forum': forum,
-                    'form': form})
+
+    return render(request, 'forum/forum_edit.html',
+                  {'forum': forum,
+                   'form': form})
 
 
 # Delete a forum
 def forum_delete(request, forum_id):
     """
     Delete a forum.
-    
+
     **Context**
     ``forum``
         An instance of :model:`forum.Forum`.
@@ -184,5 +192,6 @@ def forum_delete(request, forum_id):
         forum.delete()
         messages.add_message(request, messages.SUCCESS, 'Forum deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own forums!')
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own forums!')
     return HttpResponseRedirect(reverse('forum'))

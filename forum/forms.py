@@ -15,4 +15,4 @@ class CommentForm(forms.ModelForm):
 class CreateForum(forms.ModelForm):
     class Meta:
         model = Forum
-        fields = ["title","slug","content",]
+        fields = ["title", "slug", "content", ]

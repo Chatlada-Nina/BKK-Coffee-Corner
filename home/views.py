@@ -6,7 +6,10 @@ from .models import Post, Review
 from .forms import ReviewForm
 
 # Create your views here.
-# Create a homepage with generic views credited by I think threfore I blog: CL project"
+# Create a homepage with generic views
+# credited by I think threfore I blog: CL project
+
+
 class PostList(generic.ListView):
     queryset = Post.objects.order_by("-created_on")
     template_name = "home/index.html"
@@ -26,11 +29,9 @@ def post_detail(request, slug):
         A count of reviews related to the post.
     ``review_form``
         An instance of :form:`home.ReviewForm`.
-        
     **Template:**
     :template:`home/post_detail.html`
     """
-
 
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
@@ -51,15 +52,14 @@ def post_detail(request, slug):
 
     review_form = ReviewForm()
 
-    return render(request,
-        "home/post_detail.html",
-        {
+    return render(request, "home/post_detail.html", {
             "post": post,
             "reviews": reviews,
             "review_count": review_count,
             "review_form": review_form,
         },
     )
+
 
 def review_edit(request, slug, review_id):
     """
@@ -86,7 +86,8 @@ def review_edit(request, slug, review_id):
             review.save()
             messages.add_message(request, messages.SUCCESS, "Review Updated!")
         else:
-            messages.add_message(request, messages.ERROR, "Error updating review!")
+            messages.add_message(request, messages.ERROR,
+                                 "Error updating review!")
 
     return HttpResponseRedirect(reverse("post_detail", args=[slug]))
 
@@ -94,7 +95,7 @@ def review_edit(request, slug, review_id):
 def review_delete(request, slug, review_id):
     """
     Delete an individual review.
-    
+
     **Context**
     ``post``
         An instance of :model:`home.Post`.
@@ -109,6 +110,7 @@ def review_delete(request, slug, review_id):
         review.delete()
         messages.add_message(request, messages.SUCCESS, 'Review deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own reviews!')
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own reviews!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))

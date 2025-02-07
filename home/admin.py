@@ -3,7 +3,7 @@ from django_summernote.admin import SummernoteModelAdmin
 from .models import Post, Review
 
 
-# Add @admin.register() decorator 
+# Add @admin.register() decorator
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     """
@@ -16,4 +16,6 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = ("cafeinfo",)
 
 # Register your models here.
+
+
 admin.site.register(Review)

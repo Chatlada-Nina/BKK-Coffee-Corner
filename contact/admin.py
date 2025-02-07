@@ -6,5 +6,7 @@ from .models import Contact
 # Register your models here.
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-
-    list_display = ('message', 'read',)
+    """
+    Customizes the Django admin interface for the Contact model.
+    """
+    list_display = ('message', 'read', )

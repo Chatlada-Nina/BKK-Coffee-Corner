@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .forms import ContactForm
 
 # Create your views here.
+
+
 def contact_us(request):
     """
     Allow user contact requests.
