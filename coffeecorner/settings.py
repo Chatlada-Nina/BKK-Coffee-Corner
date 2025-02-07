@@ -31,7 +31,10 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-chatladanin-bkkcoffeeco-247o92cl364.ws.codeinstitute-ide.net', '127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = [
+    '8000-chatladanin-bkkcoffeeco-247o92cl364.ws.codeinstitute-ide.net',
+    '127.0.0.1',
+    '.herokuapp.com']
 
 
 # Application definition
@@ -57,7 +60,8 @@ INSTALLED_APPS = [
     'forum',
     'contact',
 ]
-# Add constants for Django could handle multiple sites from one database, redirection URLs to redirect us to home page after logged in and logged out.
+# Add constants for Django could handle multiple sites from one database,
+# redirection URLs to redirect us to home page after logged in and logged out.
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -123,18 +127,14 @@ CSRF_TRUSTED_ORIGINS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME':
+     'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', },
+    {'NAME':
+     'django.contrib.auth.password_validation.MinimumLengthValidator', },
+    {'NAME':
+     'django.contrib.auth.password_validation.CommonPasswordValidator', },
+    {'NAME':
+     'django.contrib.auth.password_validation.NumericPasswordValidator', },
 ]
 
 # Inform Django that it no need email verification in this project

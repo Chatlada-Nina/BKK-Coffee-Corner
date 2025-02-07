@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class About(models.Model):
     """
     Store a single about us text.

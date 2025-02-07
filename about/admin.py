@@ -3,8 +3,7 @@ from django_summernote.admin import SummernoteModelAdmin
 from .models import About
 
 
-
-# Add @admin.register() decorator 
+# Add @admin.register() decorator
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
     """
