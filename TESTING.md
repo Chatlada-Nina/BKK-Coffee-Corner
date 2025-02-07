@@ -11,6 +11,8 @@ Return back to the [README.md](README.md) file.
 - [Responsiveness](#responsiveness)
 - [Lighthouse](#lighthouse)
 - [Defensive Programming](#defensive-programming)
+- [User Story Testing](#user-story-testing)
+- [Solved bugs](#solved-bugs)
 
 ## Code Validation
 
@@ -211,3 +213,11 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a community member, I can participate in forum discussions so that I can share ideas, ask questions, and engage with other cafe enthusiasts. | ![screenshot](documentation/testing/user-story/forum-form.png)   |
 | As an Admin of the page I can edit the About content so that the content stays updated with the previous information.                           | ![screenshot](documentation/testing/user-story/about-edit.png)   |
 | As an admin I can manage post on the site so that the cafes and coffee shop information stay update and accurate.                               | ![screenshot](documentation/testing/user-story/post-edit.png)    |
+
+### Solved Bugs
+
+- During testing the lighthouse This issue "Mixed Content" occured. I have searched on the internet and end up in Slack community where I found the solution. I added `STATICFILES_STORAGE =
+'cloudinary_storage.storage.StaticHashedCloudinaryS
+torage'` to the settings.py file to ensure `HTTPS` is used instead of `HTTP` and eliminate the console warnings for Cloudinary-hosted images.
+
+- During testing the functionalities on each page, I found that the contact form isn't handled incoming POST request from the contact form. To solve this, I write the POST handler in the view, and save the submitted data to the database. (Followed the steps from Challenge: Handle the form POST request- I Think Therefore I blog from CI learning platform and modified as the site needed.) Lastly, I checked the admin panel to ensure that the contact request has been saved and the confirmation pop-up displayed properly.

@@ -240,6 +240,11 @@ Dropdown navigation menu on mobile screen size:<br>
 
 ### Features left to implement
 
+- The member profile page where members can create and personalize their profile page, upload profile picture, write bio and see their reviews and forums.
+- A feature for members to be able to view other members' profiles and add privacy settings for members to control who can view their profiles and personal information so they can share their interests with other members who have similar tastes.
+- Sorting functionality feature for reviews (Ex. by date or rating) so users can easily sort out what they are looking for and make decisions to visit those interesting cafes.
+- Reset password functionality for members, in case they forget their password.
+
 ## Testing
 
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
