@@ -68,13 +68,13 @@ The site owner aims to build a comprehensive list of local coffee shops and cafe
 
 ### Colours Theme
 
-The BKK Coffee Corner page is a user-friendly website and it's about coffee! so the main colours I chose are brown and beige, warm and invited tones. I used Maroon color for buttons to make it outstanding. Moreover, I used [WebAIM:Contrast Checker](https://webaim.org/) to check the contrast of my colours to ensure they are easy to read for users.
+The BKK Coffee Corner page is a user-friendly website and it's about coffee! so the main colours I chose are brown and beige, warm and invited tones. I used Maroon color for buttons to make it outstanding. Moreover, I used [WebAIM:Contrast Checker](https://webaim.org/resources/contrastchecker/) to check the contrast of my colours to ensure they are easy to read for users.
 
 ![The colour theme of the website](/documentation/readme/color-theme.png)
 
 ### Typography
 
-I used [League Spartan](https://fonts.google.com/specimen/Poppins) pairing with [Lora](https://fonts.google.com/specimen/Poppins) because Lora contrasts nicely with the bold, modern look of Spartan. The elegant and traditional feel complements strong contemporary aesthetic combination two fonts creates visually appealing harmonious design.
+I used [League Spartan](https://fonts.google.com/specimen/League+Spartan) pairing with [Lora](https://fonts.google.com/specimen/Lora) because Lora contrasts nicely with the bold, modern look of Spartan. The elegant and traditional feel complements strong contemporary aesthetic combination two fonts creates visually appealing harmonious design.
 
 Additionally, I use [Font Awesome](https://fontawesome.com/) for icons to make the site casual and friendly and for my social media icons in the footer to help users quickly and easily identify my social media sites.
 
@@ -107,13 +107,16 @@ The data schema for the BKK Coffee Corner website is structured using a relation
 ### User stories
 
 1. As a new user, I can create an account so that I can access the cafe's community features, reviews, posts and comments.
-2. As a site visitor, I can click on the Community page so that I can read topics and see what the trends are on the site.
-   3.As a site visitor, I can click on the About link so that I can read about the site.
-3. As a site visitor, I can use the 'Contact Us' feature to get in touch with the admin of the page so that I can ask questions or provide feedback.
-4. As a member, I can sign in to the webpage so that I can access my account and enjoy customized features and contents.
-5. As a community member, I can participate in forum discussions so that I can share ideas, ask questions, and engage with other cafe enthusiasts.
-6. As an Admin of the page I can edit the About content so that the content stays updated with the previous information.
-7. As an admin I can manage posts on the site so that the cafes and coffee shop information stay updated and accurate.
+2. As a member, I can sign in to the webpage so that I can access my account and enjoy customized features and contents.
+3. As a cafe visitor, I can write reviews about my experiences at the cafe so that I can provide feedback and help others make informed decisions.
+4. As a site visitor, I can click on the About link so that I can read about the site.
+5. As a site visitor, I can click on the Community page so that I can read topics and see what the trends are on the site.
+6. As a visitor, I can use the 'Contact Us' feature to get in touch with the admin of the page so that I can ask questions or provide feedback.
+7. As a community member, I can participate in forum discussions so that I can share ideas, ask questions, and engage with other cafe enthusiasts.
+8. As an Admin of the page I can edit the About content so that the content stays updated with the previous information.
+9. As an admin I can manage post on the site so that the cafes and coffee shop information stay update and accurate.
+10. As a member, I can create and personalize my profile page so that I can share my interests with other members who have similar tastes.
+11. As a cafe hopper, I can see and sort out reviews with high rating so that I caneasily make decisions to visit those interesting cafes.
 
 User Stories and Acceptance Criteria help me ensure each feature meets the desired functionality and user experience.
 
@@ -244,13 +247,14 @@ Dropdown navigation menu on mobile screen size:<br>
 - The member profile page where members can create and personalize their profile page, upload profile picture, write bio and see their reviews and forums.
 - A feature for members to be able to view other members' profiles and add privacy settings for members to control who can view their profiles and personal information so they can share their interests with other members who have similar tastes.
 - Sorting functionality feature for reviews (Ex. by date or rating) so users can easily sort out what they are looking for and make decisions to visit those interesting cafes.
+- A feature for the review box to upload images with text and rating.
 - Reset password functionality for members, in case they forget their password.
 
 ## Testing
 
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
-### Deployment and Local Deployment
+## Deployment & Local Deployment
 
 ### Deployment
 
@@ -392,7 +396,9 @@ The project should now be connected and deployed to Heroku!
 - The description and information of cafes and the about us were modified from [Microsoft Copilot](https://copilot.microsoft.com/)
 - The reviews and comments texts were modified by myself.
 - The Modal of confirmation was learned and modified from I Think Therefore I blog: CI learning platform.
+- The rating system was learned and modified from [StackOverFlow Community](https://stackoverflow.com/questions/45845427/styling-an-integerfield-to-make-it-a-star-rating-system)
 - Modified and combined components methods from documentations and tutorials on CI learning platform, [W3Schools](https://w3Schools.com/), [MDN Web Docs](https://developer.mozilla.org/en-US/) and [StackOverFlow](https://stackoverflow.co/)
+- Templates for inspiration and creating my readme.md and testing.md from [Sample README Code Institute](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md?plain=1), [Coastal Gardens-LemmenAid](https://github.com/LemmenAid/coastal-gardens/blob/main/README.md) and [My Fishing Adventures-Markdanie1982](https://github.com/markdaniel1982/MD82-P4/blob/main/README.md)
 
 ### Media
 

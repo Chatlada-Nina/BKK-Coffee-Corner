@@ -133,7 +133,7 @@ def forum_new(request):
     Allow user to create a new forum.
 
     **Context**
-    ``contact_form``
+    ``form``
         An instance of :form: `forum.form`.
 
     **Template:**
