@@ -48,8 +48,8 @@ class Comment(models.Model):
 
 
 # Add a Meta class to define order of reviews
-class Meta:
-    ordering = ["created_on"]
+    class Meta:
+        ordering = ["created_on"]
 
 # Display class object as a string to improve readable for admin
     def __str__(self):

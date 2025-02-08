@@ -220,3 +220,5 @@ Defensive programming was manually tested with the below user acceptance testing
 torage'` to the settings.py file to ensure `HTTPS` is used instead of `HTTP` and eliminate the console warnings for Cloudinary-hosted images.
 
 - During testing the functionalities on each page, I found that the contact form isn't handled incoming POST request from the contact form. To solve this, I write the POST handler in the view, and save the submitted data to the database. (Followed the steps from Challenge: Handle the form POST request- I Think Therefore I blog from CI learning platform and modified as the site needed.) Lastly, I checked the admin panel to ensure that the contact request has been saved and the confirmation pop-up displayed properly.
+
+- One of my users report that when he clicked Edit button on his review, he must scroll down to see the existing review which makes it not so good UX. To improve this, I have created a JS functionality to make it scroll down automatically when user clicked Edit both on Reviews and comment section.

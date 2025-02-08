@@ -5,7 +5,6 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from .models import Forum, Comment
 from .forms import CommentForm, CreateForum
-
 from . import forms
 
 # Create your views here.

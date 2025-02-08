@@ -1,13 +1,14 @@
 /* jshint esversion: 6 */
 
-const editButtons = document.getElementsByClassName("btn-edit");
-const reviewText = document.getElementById("id_body");
-const reviewForm = document.getElementById("reviewForm");
-const submitButton = document.getElementById("submitButton");
+document.addEventListener("DOMContentLoaded", function() {
+  const editButtons = document.getElementsByClassName("btn-edit");
+  const reviewText = document.getElementById("id_body");
+  const reviewForm = document.getElementById("reviewForm");
+  const submitButton = document.getElementById("submitButton");
 
-const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
-const deleteButtons = document.getElementsByClassName("btn-delete");
-const deleteConfirm = document.getElementById("deleteConfirm");
+  const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+  const deleteButtons = document.getElementsByClassName("btn-delete");
+  const deleteConfirm = document.getElementById("deleteConfirm");
 
 /** Credit by I Think Therefore I Blog: CL project and customised as the site needed.
 
@@ -19,15 +20,25 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 * - Updates the submit button's text to "Update".
 * - Sets the form's action attribute to the `edit_review/{reviewId}` endpoint.
 **/
-for (let button of editButtons) {
-  button.addEventListener("click", (e) => {
-    let reviewId = e.target.getAttribute("data-review_id");
-    let reviewContent = document.getElementById(`review${reviewId}`).innerText;
-    reviewText.value = reviewContent;
-    submitButton.innerText = "Update";
-    reviewForm.setAttribute("action", `edit_review/${reviewId}`);
-  });
-}
+  for (let button of editButtons) {
+    button.addEventListener("click", (e) => {
+      let reviewId = e.target.getAttribute("data-review_id");
+      let reviewContent = document.getElementById(`review${reviewId}`).innerText;
+      reviewText.value = reviewContent;
+      submitButton.innerText = "Update";
+      reviewForm.setAttribute("action", `edit_review/${reviewId}`);
+
+      // Smooth scrolling to the reviewText
+      reviewText.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+      // Focus on the reviewText
+      reviewText.focus();
+
+    });
+  }
 
 
 /**
@@ -40,10 +51,11 @@ for (let button of editButtons) {
 * - Displays a confirmation modal (`deleteModal`) to prompt 
 * the user for confirmation before deletion.
 */
-for (let button of deleteButtons) {
-  button.addEventListener("click", (e) => {
-    let reviewId = e.target.getAttribute("data-review_id");
-    deleteConfirm.href = `delete_review/${reviewId}`;
-    deleteModal.show();
-  });
-}
+  for (let button of deleteButtons) {
+    button.addEventListener("click", (e) => {
+      let reviewId = e.target.getAttribute("data-review_id");
+      deleteConfirm.href = `delete_review/${reviewId}`;
+      deleteModal.show();
+    });
+  }
+});
