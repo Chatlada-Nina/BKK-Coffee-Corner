@@ -1,20 +1,21 @@
 # BKK Coffee Corner
 
-— SCREENSHOT OF RESPONSIVE SCREEN —
 ![The website shown on a variety of screen sizes](/documentation/readme/screen-responsive.png)
+
+[View Live Website here.](https://bkk-coffee-corner-f07d5b0b8233.herokuapp.com/)
+
+[GitHub Repo](https://github.com/Chatlada-Nina/BKK-Coffee-Corner)
 
 **Welcome to BKK Coffee Corner!!**
 
 **BKK Coffee Corner** is the community platform where coffee lovers can find local coffee shops and cafes, read and leave reviews, post anything’s coffee in forums and so on. The site owner can gather data on local coffee shops trends and support local commerce. This project could create a thriving community of coffee lovers and provide value to users and the site owner.
 Whether you have a deep passion for coffee or simply savor the cozy atmosphere of a café, you'll find friends here. So, settle into a comfy chair, grab a cup of coffee, and join the conversation. Share your coffee experiences, post pictures, and engage with fellow enthusiasts.☕️🌍📸
 
-![GitHub last commit](https://img.shields.io/github/last-commit/chatlada-nina/TheGuessWordGame?color=darkcyan&style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/chatlada-nina/TheGuessWordGame?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/chatlada-nina/TheGuessWordGame?style=for-the-badge)
-![GitHub top language](https://img.shields.io/github/languages/top/chatlada-nina/TheGuessWordGame?color=yellow&style=for-the-badge)
-![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fchatlada-nina.github.io%2FTheGuessWordGame%2F&style=for-the-badge)
-
-— CONTENT SECTION —
+![GitHub last commit](https://img.shields.io/github/last-commit/Chatlada-Nina/BKK-Coffee-Corner?color=brown&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/chatlada-nina/BKK-Coffee-Corner?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/chatlada-nina/BKK-Coffee-Corner?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/chatlada-nina/BKK-Coffee-Corner?color=yellow&style=for-the-badge)
+![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fbkk-coffee-corner-f07d5b0b8233.herokuapp.com%2F&style=for-the-badge)
 
 ## CONTENTS
 
