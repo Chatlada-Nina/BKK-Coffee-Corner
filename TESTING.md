@@ -2,19 +2,21 @@
 
 Return back to the [README.md](README.md) file.
 
-## Index – Table of Contents
+## CONTENTS
 
-- [HTML](#html)
-- [CSS](#css)
-- [JavaScript](#javascript)
-- [Python](#python)
-- [Responsiveness](#responsiveness)
-- [Lighthouse](#lighthouse)
-- [Defensive Programming](#defensive-programming)
-- [User Story Testing](#user-story-testing)
-- [Solved bugs](#solved-bugs)
+- [AUTOMATED TESTING](#automated-testing)
+  - [HTML](#html)
+  - [CSS](#css)
+  - [JavaScript](#javascript)
+  - [Python](#python)
+  - [Lighthouse](#lighthouse)
+- [MANUAL TESTING](#manual-testing)
+  - [Responsiveness](#responsiveness)
+  - [Defensive Programming](#defensive-programming)
+  - [User Story Testing](#user-story-testing)
+- [SOLVED BUGS](#solved-bugs)
 
-## Code Validation
+## AUTOMATED TESTING
 
 ### HTML
 
@@ -115,12 +117,6 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | urls.py       | ![screenshot](documentation/testing/python/forum-app/urls.png)       | Pass: No Errors |
 | views.py      | ![screenshot](documentation/testing/python/forum-app/views.png)      | Pass: No Errors |
 
-### Responsiveness
-
-- The website has been tested on different devices(under which; iPhone 13 / Samsung Galaxy S9 / MacBook Air / Lenovo laptop).
-- The website was responsive on all screens from mobile phones to desktops.
-- Chrome DEV Tools have been used to check the responsivness throughout the development of the website.
-
 ### Lighthouse
 
 I've audited my deployed project with the Lighthouse tool to identify any significant issues. Overall, I'm pleased with the results. However, it's worth noting that the 'Best Practices' score is notably affected by the Cloudinary images.
@@ -136,6 +132,24 @@ I've audited my deployed project with the Lighthouse tool to identify any signif
 | Contact us    | Desktop | ![screenshot](documentation/testing/lighthouse/contactus.png)     |
 | Sign In       | Desktop | ![screenshot](documentation/testing/lighthouse/signin.png)        |
 | Sign Up       | Desktop | ![screenshot](documentation/testing/lighthouse/signup.png)        |
+
+## MANUAL TESTING
+
+### Responsiveness
+
+Full responsive testing was performed on the following devices:
+
+- Laptop:
+  - Macbook Air 2012 13 inch screen
+  - Lenovo Ideapad 14 inch screen
+- Mobile Devices:
+  - IPhone 13
+  - Samsung galaxy Note 9
+
+Each device tested the site using the following browsers:
+
+- Google Chrome
+- Safari
 
 ### Defensive Programming
 
@@ -192,9 +206,9 @@ Defensive programming was manually tested with the below user acceptance testing
 |                                                | Click sign up link                                    | Redirects user to Sign up page                                                  | Pass      |          |
 |                                                | Enter valid username                                  | Field will only accept username format                                          | Pass      |          |
 |                                                | Enter valid password                                  | Field will only accept password format                                          | Pass      |          |
-| Log Out                                        |                                                       |                                                                                 |           |          |
+| **Log Out**                                    |                                                       |                                                                                 |           |          |
 |                                                | Click Logout button                                   | Logs out user, a confirmation message popped up and Redirects user to home page | Pass      |
-| Site buttons and links                         |                                                       |                                                                                 |           |          |
+| **Site buttons and links**                     |                                                       |                                                                                 |           |          |
 |                                                | Hover effect buttons                                  | hover effect for buttons across the site the background colour change           | Pass      |
 |                                                | Hover effect links                                    | hover effect for links across the site the under-line appear                    | Pass      |
 |                                                | Hover effect Social media icons                       | hover effect for Social media icons across the site the colour change           | Pass      |

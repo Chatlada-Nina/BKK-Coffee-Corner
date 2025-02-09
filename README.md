@@ -9,7 +9,7 @@
 **Welcome to BKK Coffee Corner!!**
 
 **BKK Coffee Corner** is the community platform where coffee lovers can find local coffee shops and cafes, read and leave reviews, post anything’s coffee in forums and so on. The site owner can gather data on local coffee shops trends and support local commerce. This project could create a thriving community of coffee lovers and provide value to users and the site owner.
-Whether you have a deep passion for coffee or simply savor the cozy atmosphere of a café, you'll find friends here. So, settle into a comfy chair, grab a cup of coffee, and join the conversation. Share your coffee experiences, post pictures, and engage with fellow enthusiasts.☕️🌍📸
+Whether you have a deep passion for coffee or simply savor the cozy atmosphere of a café, you'll find friends here. So, settle into a comfy chair, grab a cup of coffee, and join the conversation. Share your coffee experiences and engage with fellow enthusiasts.☕️🌍📸
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Chatlada-Nina/BKK-Coffee-Corner?color=brown&style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/chatlada-nina/BKK-Coffee-Corner?style=for-the-badge)
@@ -100,7 +100,7 @@ Additionally, I use [Font Awesome](https://fontawesome.com/) for icons to make t
 
 ### Data Schema
 
-The data schema for the BKK Coffee Corner website is structured using a relational model, as illustrated in the Entity Relationship Diagram (ERD) provided. Below is an Entity Relationship Diagram that shows the key models and their fields:
+I used [Lucidchart](https://www.lucidchart.com/pages) for my data plan. The data schema for the BKK Coffee Corner website is structured using a relational model, as illustrated in the Entity Relationship Diagram (ERD) provided. Below is an Entity Relationship Diagram that shows the key models and their fields:
 
 ![Entity Relationship Diagram (ERD)](documentation/readme//er-diagram.png)
 
@@ -113,10 +113,10 @@ The data schema for the BKK Coffee Corner website is structured using a relation
 5. As a site visitor, I can click on the Community page so that I can read topics and see what the trends are on the site.
 6. As a visitor, I can use the 'Contact Us' feature to get in touch with the admin of the page so that I can ask questions or provide feedback.
 7. As a community member, I can participate in forum discussions so that I can share ideas, ask questions, and engage with other cafe enthusiasts.
-8. As an Admin of the page I can edit the About content so that the content stays updated with the previous information.
+8. As an admin of the page I can edit the About content so that the content stays updated with the previous information.
 9. As an admin I can manage post on the site so that the cafes and coffee shop information stay update and accurate.
 10. As a member, I can create and personalize my profile page so that I can share my interests with other members who have similar tastes.
-11. As a cafe hopper, I can see and sort out reviews with high rating so that I caneasily make decisions to visit those interesting cafes.
+11. As a cafe hopper, I can see and sort out reviews with high rating so that I can easily make decisions to visit those interesting cafes.
 
 User Stories and Acceptance Criteria help me ensure each feature meets the desired functionality and user experience.
 
@@ -145,11 +145,11 @@ Dropdown navigation menu on mobile screen size:<br>
 
 ### Home Page
 
-- The Home Page serves as an inviting introduction to the BKK Coffee Corner with a captivating image and a clear call-to-action button "Join us" leading to the sign-up page. The Cafes reviews section displays in cards that preview a picture of a cafe, Cafes name,an excerpt and read reviews link keeping content fresh and engaging for all visitors. The sticky navigation bar follows along when the user scrolls down offering easy navigation across the site at all times.
+- The Home Page serves as an inviting introduction to the BKK Coffee Corner with a captivating image and a clear call-to-action button "JOIN US!" leading to the sign-up page (This button will be hidden when user is logge in.) The Cafes reviews section displays in cards that preview a picture of a cafe, Cafes name, an excerpt and a read reviews link keeping content fresh and engaging for all visitors. The sticky navigation bar follows along when the user scrolls down offering easy navigation across the site at all times.
 
 ![Home Page](documentation/readme/home-page.png)
 
-- This Cafe reviews section is a part of the home page that shows all the cafes the site has updated. Every card included an image, cafe's name,an excerpt and a Read reviews button to navigate to the Cafe details and reviews page if the users want to read or write reviews immediately.
+- This Cafe reviews section is a part of the home page that shows all the cafes the site has updated and sorted of by latest date. Every card included an image, cafe's name,an excerpt and a Read reviews button to navigate to the Cafe details and reviews page if the users want to read or write reviews.
 
 ![Cafe reviews section](documentation/readme/cafe-reviews-section.png)
 
@@ -205,7 +205,7 @@ Dropdown navigation menu on mobile screen size:<br>
 
 ### Contact us Page
 
-- The contact us page provides a direct way for users to contact with feedback or inquiries. Ensure users feel supported and have access to give feedback to the owner site, including inquiry of corporation partners.
+- The contact us page provides a direct way for users to contact with feedback or inquiries. Ensure users feel supported and have access to give feedback to the site owner, including inquiry of corporation partners.
 
 ![Contact us](documentation/readme/contactus.png)
 
@@ -241,6 +241,8 @@ Dropdown navigation menu on mobile screen size:<br>
 - Custom error page to ensure user-friendly navigation in any unexpected situations.
 
 ![Custom Error 404 Handler](documentation/readme/404page.png)
+
+![Custom Error 500 Handler](documentation/readme/500page.png)
 
 ### Features left to implement
 
@@ -309,13 +311,13 @@ Once the project is cloned or forked, in order to run it locally, you'll need to
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Chatlada-Nina/BKK-Coffee-Corner)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
 #### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Chatlada-Nina/BKK-Coffee-Corner)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
@@ -392,7 +394,9 @@ The project should now be connected and deployed to Heroku!
 
 - The font styles in the BKK Coffee Corner website were taken from Google Fonts [Lora](https://fonts.google.com/specimen/Lora) and [League Spartan](https://fonts.google.com/specimen/League+Spartan)
 - The icons in the website were taken from [Font Awesome](https://fontawesome.com/)
-- Wireframes I have created in [Canva](https://canva.com/)
+- The BKK Coffee Corner logo I have created on [Canva](https://canva.com/)
+- Wireframes I have created on [Canva](https://canva.com/)
+- The Entity Relationship Diagram (ERD) I have created on [Lucidchart](https://www.lucidchart.com/pages)
 - The description and information of cafes and the about us were modified from [Microsoft Copilot](https://copilot.microsoft.com/)
 - The reviews and comments texts were modified by myself.
 - The Modal of confirmation was learned and modified from I Think Therefore I blog: CI learning platform.
